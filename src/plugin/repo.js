@@ -68,10 +68,10 @@ const handleRepoCommand = async (m, Matrix, repoUrl) => {
             nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
               buttons: [
                 {
-                  name: 'quick_reply',
+                  name: 'cta_url',
                   buttonParamsJson: JSON.stringify({
                     display_text: 'Contact Owner',
-                    id: '.owner',
+                    url: 'https://wa.me/+94711262551?text=HI_HANSAMAL_BOT_OWNER',
                   }),
                 },
                 {
