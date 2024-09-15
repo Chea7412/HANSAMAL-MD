@@ -110,10 +110,10 @@ async function start() {
         Matrix.ev.on("call", async (json) => await Callupdate(json, Matrix));
         Matrix.ev.on("group-participants.update", async (messag) => await GroupUpdate(Matrix, messag));
 
-        if (config.MODE === "public") {
-            Matrix.public = true;
+        if (config.MODE === "private") {
+            Matrix.private = true;
         } else if (config.MODE === "private") {
-            Matrix.public = false;
+            Matrix.private = true;
         }
 
         Matrix.ev.on('messages.upsert', async (chatUpdate) => {
